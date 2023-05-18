@@ -25,17 +25,28 @@ const StyledLink = styled(NavLink)`
 
 const Navigation = () => {
 	const { pathname } = useLocation()
-	const [activePage, setActivePage] = useState(pathname)
+	const [activePage, setActivePage] = useState("")
 	console.log(activePage)
 
 	useEffect(() => {
-		setActivePage(pathname)
+		switch (pathname) {
+			case "/":
+				setActivePage("home")
+				break
+
+			case "/tweets":
+				setActivePage("tweets")
+				break
+
+			default:
+				setActivePage("home")
+		}
 	}, [pathname])
 
 	return (
 		<header className={css.header}>
 			<nav className={css.nav}>
-				{activePage === "/" ? (
+				{activePage === "home" ? (
 					<StyledLink to="/">
 						<BiHomeSmile fontSize="1.5em" />
 						Home
