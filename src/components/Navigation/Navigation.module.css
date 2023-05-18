@@ -1,0 +1,28 @@
+.header {
+  width: 1216px;
+  display: flex;
+  justify-content: center;
+  padding: 8px 64px;
+  background-color: #5736A3;
+  border-bottom: 2px solid #000;
+  border-radius: 20px;
+  
+}
+
+.headerT {
+  width: 1216px;
+  display: flex;
+  justify-content: center;
+  padding: 8px 64px;
+  background-color: green;
+  border-bottom: 2px solid #000;
+  border-radius: 20px;
+  
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 8px;
+  }

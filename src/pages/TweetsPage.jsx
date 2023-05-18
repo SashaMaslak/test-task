@@ -1,10 +1,10 @@
 import { useState, useEffect, Suspense } from "react"
-import CardsList from "./CardsList/CardsList"
+import CardsList from "../components/CardsList/CardsList"
 import { fetchUsers } from "../services/usersAPI"
 import { Loader } from "../components/Loader/Loader"
 import { Button } from "../components/Button/Button"
 
-const Main = () => {
+const TweetsPage = () => {
 	const [users, setUsers] = useState([])
 	const [page, setPage] = useState(1)
 	const [isLoading, setIsLoading] = useState(false)
@@ -39,4 +39,4 @@ const Main = () => {
 	)
 }
 
-export default Main
+export default TweetsPage
