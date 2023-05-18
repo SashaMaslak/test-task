@@ -1,0 +1,32 @@
+.btnContainer {
+   display: flex;
+   justify-content: center;
+}
+.btn {
+   background-color: #E8E8E8;
+  width: 196px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #373737;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid none;
+  transition: border-color 0.25s;
+}
+
+.btn:hover {
+  border-color: #646cff;
+}
+.btn:focus,
+.btn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+/* 
+
+
+avatarStyle=Transparent
+https://avataaars.io/?accessoriesType=Wayfarers&avatarStyle=Circle&clotheColor=Gray01&clotheType=BlazerShirt&eyeType=Happy&eyebrowType=Angry&facialHairColor=Brown&facialHairType=BeardLight&hairColor=Brown&hatColor=PastelGreen&mouthType=Tongue&skinColor=Tanned&topType=ShortHairTheCaesarSidePart */

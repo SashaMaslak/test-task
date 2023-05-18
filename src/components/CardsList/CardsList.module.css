@@ -1,0 +1,11 @@
+.cardsList {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #E8E8E8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1rem;
+}
