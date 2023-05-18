@@ -30,8 +30,10 @@ const TweetsPage = () => {
 		<>
 			{isLoading && <Loader />}
 			<Suspense fallback={null}>
-				{!!users.length && <CardsList users={users} page={page} />}
-				{!!users.length && !isLoading && (
+				{Array.isArray(users) && !!users.length && (
+					<CardsList users={users} page={page} />
+				)}
+				{Array.isArray(users) && !!users.length && !isLoading && (
 					<Button handleLoadMore={handleLoadMore} />
 				)}
 			</Suspense>

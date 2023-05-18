@@ -18,7 +18,7 @@ const StyledLink = styled(NavLink)`
 		color: #5cd3a8;
 	}
 	&.active {
-		border-bottom: 3px solid #5cd3a8;
+		border-bottom: 3px solid #ebd8ff;
 		border-radius: 3px;
 	}
 `
