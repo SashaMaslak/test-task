@@ -6,12 +6,11 @@ export const Loader = () => {
 		<div className={css.loaderContainer}>
 			<CirclesWithBar
 				type="Puff"
-				color="#34ebae"
+				color="#5736A3"
 				height={200}
 				width={200}
 				timeout={3000}
 			/>
-			<span className={css.loaderText}>Loading...</span>
 		</div>
 	)
 }

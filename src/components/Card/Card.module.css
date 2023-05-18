@@ -65,16 +65,6 @@
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
 }
 
-.avatar {
-margin-bottom: 0px;
-
-  /* left: 50%;
-  transform: translate(-50%, -45%);
-  margin-top: 0px;
-  background-color: transparent; */
-
-}
-
 .btn {
   width: 196px;
   font-family: 'Montserrat';
@@ -83,6 +73,19 @@ margin-bottom: 0px;
   font-size: 18px;
   line-height: 22px;
   text-transform: uppercase;
+  color: #373737;
+  padding: 14px 56px;
+}
+
+.btnActive {
+  width: 196px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  background-color: #5CD3A8;
   color: #373737;
   padding: 14px 56px;
 }

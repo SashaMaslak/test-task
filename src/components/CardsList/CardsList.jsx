@@ -13,7 +13,7 @@ const CardsList = ({ users, page }) => {
 	return (
 		<ul className={css.cardsList}>
 			{filteredUsers.map((item) => (
-				<Card key={item.id} item={item} page={page} />
+				<Card key={item.id} item={item} />
 			))}
 		</ul>
 	)
