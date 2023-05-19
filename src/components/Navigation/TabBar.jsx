@@ -3,6 +3,8 @@ import { useLocation, useNavigate } from "react-router-dom"
 import { NavLink } from "react-router-dom"
 import { BiArrowBack, BiHomeSmile } from "react-icons/bi"
 import { FaUsers } from "react-icons/fa"
+
+import { Dropdown } from "../Dropdown/Dropdown"
 import styled from "styled-components"
 import css from "./TabBar.module.css"
 
@@ -27,7 +29,7 @@ const TabBar = () => {
 	const navigate = useNavigate()
 	const { pathname } = useLocation()
 	const [activePage, setActivePage] = useState("")
-	console.log(activePage)
+	const [selected, setSelected] = useState("")
 
 	useEffect(() => {
 		switch (pathname) {
@@ -62,10 +64,14 @@ const TabBar = () => {
 						Back
 					</p>
 				)}
-				<StyledLink to="/tweets">
-					<FaUsers fontSize="1.5em" />
-					Tweets
-				</StyledLink>
+				<div style={{ display: "flex", alignItems: "center" }}>
+					<StyledLink to="/tweets">
+						<FaUsers fontSize="1.5em" />
+						Tweets
+					</StyledLink>
+
+					<Dropdown selected={selected} setSelected={setSelected} />
+				</div>
 			</nav>
 		</header>
 	)
