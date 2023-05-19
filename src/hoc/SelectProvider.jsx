@@ -1,4 +1,5 @@
 import { createContext, useState } from "react"
+import PropTypes from "prop-types"
 
 export const SelectTweetsContext = createContext("All tweets")
 
@@ -16,4 +17,8 @@ export const SelectTweetsProvider = ({ children }) => {
 			{children}
 		</SelectTweetsContext.Provider>
 	)
+}
+
+SelectTweetsProvider.propTypes = {
+	children: PropTypes.node,
 }
