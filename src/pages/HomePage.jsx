@@ -1,6 +1,8 @@
 const Home = () => {
 	return (
-		<div style={{ width: 1216, fontSize: 48, marginTop: 48 }}>HOME PAGE</div>
+		<div>
+			<h1 style={{ width: 1216, fontSize: 48, marginTop: 48 }}>HOME PAGE</h1>
+		</div>
 	)
 }
 

@@ -29,7 +29,6 @@ const TabBar = () => {
 	const navigate = useNavigate()
 	const { pathname } = useLocation()
 	const [activePage, setActivePage] = useState("")
-	const [selected, setSelected] = useState("")
 
 	useEffect(() => {
 		switch (pathname) {
@@ -64,13 +63,12 @@ const TabBar = () => {
 						Back
 					</p>
 				)}
+				{activePage === "tweets" && <Dropdown />}
 				<div style={{ display: "flex", alignItems: "center" }}>
 					<StyledLink to="/tweets">
 						<FaUsers fontSize="1.5em" />
 						Tweets
 					</StyledLink>
-
-					<Dropdown selected={selected} setSelected={setSelected} />
 				</div>
 			</nav>
 		</header>

@@ -2,12 +2,15 @@ import React from "react"
 import ReactDOM from "react-dom/client"
 import { BrowserRouter } from "react-router-dom"
 import { App } from "./App.jsx"
+import { SelectTweetsProvider } from "./hoc/SelectProvider.jsx"
 import "./index.css"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<React.StrictMode>
 		<BrowserRouter basename="/test-task/">
-			<App />
+			<SelectTweetsProvider>
+				<App />
+			</SelectTweetsProvider>
 		</BrowserRouter>
 	</React.StrictMode>
 )

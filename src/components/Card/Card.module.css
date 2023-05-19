@@ -65,7 +65,7 @@
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
 }
 
-.btn {
+.btn, .btnActive {
   width: 196px;
   font-family: 'Montserrat';
   font-style: normal;
@@ -74,7 +74,7 @@
   line-height: 22px;
   text-transform: uppercase;
   color: #373737;
-  padding: 14px 56px;
+  padding: 14px 14px;
 }
 
 .btnActive {
@@ -86,6 +86,5 @@
   line-height: 22px;
   text-transform: uppercase;
   background-color: #5CD3A8;
-  color: #373737;
-  padding: 14px 56px;
+
 }

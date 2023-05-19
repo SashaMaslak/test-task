@@ -1,12 +1,18 @@
 import { useEffect, useRef, useState } from "react"
-import PropTypes from "prop-types"
+import { useSelectTweets } from "../../hooks/useSelectTweets"
 import { BiDownArrow } from "react-icons/bi"
 import css from "./Dropdown.module.css"
 
-export const Dropdown = ({ selected, setSelected }) => {
+export const Dropdown = () => {
 	const myRef = useRef()
+	const [selected, setSelected] = useState("All Tweets")
 	const [isActive, setIsActive] = useState(false)
-	const options = ["Followings", "Follow"]
+	const options = ["All Tweets", "Followings", "Follow"]
+	const { changeSelected } = useSelectTweets()
+
+	useEffect(() => {
+		changeSelected(selected)
+	}, [selected, changeSelected])
 
 	const handleClickOutside = (e) => {
 		if (!myRef.current.contains(e.target)) {
@@ -44,7 +50,7 @@ export const Dropdown = ({ selected, setSelected }) => {
 			{isActive && (
 				<div className={css.dropdownContent}>
 					{options.map((option) => (
-						<>
+						<div key={option}>
 							<div
 								className={css.dropdownItem}
 								onClick={() => {
@@ -54,15 +60,10 @@ export const Dropdown = ({ selected, setSelected }) => {
 							>
 								{option}
 							</div>
-						</>
+						</div>
 					))}
 				</div>
 			)}
 		</div>
 	)
-}
-
-Dropdown.propTypes = {
-	selected: PropTypes.string.isRequired,
-	setSelected: PropTypes.func.isRequired,
 }

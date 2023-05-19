@@ -6,7 +6,7 @@ import logoGoIT from "../../assets/logoGoIT.svg"
 import css from "./Card.module.css"
 
 const initialLS = {
-	isFollowLS: null,
+	isFollowLS: false,
 	counterFollowersLS: null,
 	avaLS: null,
 }
@@ -83,7 +83,7 @@ const Card = ({ item }) => {
 					className={isFollow ? css.btnActive : css.btn}
 					onClick={handleChangeFollow}
 				>
-					FOLLOW
+					{isFollow ? "FOLLOWING" : "FOLLOW"}
 				</button>
 			</div>
 		</li>
