@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react"
-import { useLocation } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 import { NavLink } from "react-router-dom"
 import { BiArrowBack, BiHomeSmile } from "react-icons/bi"
 import { FaUsers } from "react-icons/fa"
 import styled from "styled-components"
-import css from "./Navigation.module.css"
+import css from "./TabBar.module.css"
 
 const StyledLink = styled(NavLink)`
 	display: flex;
@@ -23,7 +23,8 @@ const StyledLink = styled(NavLink)`
 	}
 `
 
-const Navigation = () => {
+const TabBar = () => {
+	const navigate = useNavigate()
 	const { pathname } = useLocation()
 	const [activePage, setActivePage] = useState("")
 	console.log(activePage)
@@ -43,6 +44,10 @@ const Navigation = () => {
 		}
 	}, [pathname])
 
+	const goBack = () => {
+		navigate(-1)
+	}
+
 	return (
 		<header className={css.header}>
 			<nav className={css.nav}>
@@ -52,10 +57,10 @@ const Navigation = () => {
 						Home
 					</StyledLink>
 				) : (
-					<StyledLink to="/">
+					<p className={css.text} onClick={goBack}>
 						<BiArrowBack fontSize="1.5em" />
 						Back
-					</StyledLink>
+					</p>
 				)}
 				<StyledLink to="/tweets">
 					<FaUsers fontSize="1.5em" />
@@ -66,4 +71,4 @@ const Navigation = () => {
 	)
 }
 
-export default Navigation
+export default TabBar
