@@ -1,7 +1,8 @@
 //import { lazy } from "react"
-import { Route, Routes, Navigate } from "react-router-dom"
+import { Route, Routes } from "react-router-dom"
 import HomePage from "./pages/HomePage"
 import TweetsPage from "./pages/TweetsPage"
+import { NotFoundPage } from "./pages/NotFoundPage"
 import Layout from "./pages/Layout"
 import "./App.css"
 
@@ -15,7 +16,7 @@ export const App = () => {
 				<Route index element={<HomePage />} />
 				<Route path="tweets" element={<TweetsPage />} />
 			</Route>
-			<Route path="*" element={<Navigate to="/" />} />
+			<Route path="*" element={<NotFoundPage />} />
 		</Routes>
 	)
 }
